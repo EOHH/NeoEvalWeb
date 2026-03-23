@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+/* Definimos nuestra paleta de colores de nivel SaaS */
+@theme {
+  --color-primary: #2563EB;
+  --color-primary-foreground: #FFFFFF;
+  --color-primary-hover: #1D4ED8;
+  
+  --color-destructive: #EF4444;
+  --color-destructive-foreground: #FFFFFF;
+  --color-destructive-hover: #DC2626;
+  
+  --color-muted: #F3F4F6;
+  --color-muted-foreground: #6B7280;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-muted);
+    color: #111827;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
