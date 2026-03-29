@@ -16,6 +16,7 @@ import { CreateExamPage } from '@/features/exams/routes/CreateExamPage';
 import { EditExamPage } from '@/features/exams/routes/EditExamPage';
 import { ExamDetailsPage } from '@/features/exams/routes/ExamDetailsPage';
 import { QuestionsEditorPage } from '@/features/exams/routes/QuestionsEditorPage';
+import { RegisterPage } from './features/auth/routes/RegisterPage';
 
 function App() {
   // Escuchamos el estado de autenticación de Zustand
@@ -29,6 +30,12 @@ function App() {
         <Route 
           path="/login" 
           element={isAuthenticated ? <Navigate to="/dashboard" replace /> : <LoginPage />} 
+        />
+
+        {/* LA RUTA DE REGISTRO */}
+        <Route 
+          path="/register" 
+          element={isAuthenticated ? <Navigate to="/dashboard" replace /> : <RegisterPage />} 
         />
 
         {/* === RUTAS PRIVADAS (Envueltas en el MainLayout) === */}

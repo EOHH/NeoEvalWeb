@@ -21,3 +21,16 @@ export interface LoginCredentials {
   email: string;
   password: string;
 }
+
+export interface RegisterCredentials {
+  name: string;
+  email: string;
+  password: string;
+  userType: 'ADMIN' | 'TEACHER' | 'STUDENT' | 'PARENT';
+  educationalLevel?: string;
+  birthDate?: string; // Formato "YYYY-MM-DD"
+  relationship?: string;
+  studentId?: number;
+  department?: string;
+  expertiseArea?: string;
+}
